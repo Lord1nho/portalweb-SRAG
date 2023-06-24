@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+### Ao puxar o repo pro ambiente de vocês, lembrem de dar um npm i (já tá configurado como nosso gerenciador)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
