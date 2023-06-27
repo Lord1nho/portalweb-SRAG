@@ -1,6 +1,7 @@
 import './App.css';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import { BarChart, Bar, ResponsiveContainer } from 'recharts';
+import { DateField } from '../components/DateField';
+import { ButtonConsultar } from '../components/ButtonConsultar';
 const data = [
   {
     name: 'Page A',
@@ -50,22 +51,34 @@ function App() {
   return (
     <div className="App">
       <header className="AppHeader">
-        <p>
-          Portal Web - Dados sobre a SRAG - SINDROME RESPIRATÓRIA AGUDA
-        </p>
+        <h1>
+          Portal SRAG Brasil
+        </h1>
+        <h2>Versão 1.0 do Portal da Síndrome Respiratória Aguda</h2>
       </header>
-      <section className='AppContent'>
-        <div className='AppContentSearch'>
-          <select name="" id="">
-            <option value="CONSULTA1">CONSULTA1</option>
-            <option value="CONSULTA2">CONSULTA2</option>
-            <option value="CONSULTA3">CONSULTA3</option>
-          </select>
-          <input type="date" name="" id="" />
-          <input type="date" name="" id="" />
-          <button className='AppContentSearchButton'>Consultar</button>
+      <section style={{width:200, height: 150, marginLeft: 50,marginTop: 50}} className='ConsultaQst1'>
+        <div className='AppContentSearch1'>
+            <p> 1 - Pessoas que possuem contatos com animais estão mais propensas a ter SRAG?</p>
+            <DateField id='Data-inicio-C1' name='periodo-inicio' />
+            <DateField id='Data-fim-c1' name='periodo-fim' />
+          <ButtonConsultar/>
         </div>
-        <div className='AppContentBody'>
+        <div className='AppContentBody1'>
+        <ResponsiveContainer width="100%" height="100%">
+            <BarChart width={150} height={40} data={data}>
+              <Bar dataKey="uv" fill="#1da584" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </section>
+      <section style={{width:200, height: 150, marginLeft: 50,marginTop: 50}} className='ConsultaQst2'>
+        <div className='AppContentSearch2' >
+            <p> 2 - Pessoas não vacinadas contra a covid possuem mais chances de ter outros tipos de SRAG tirando a covid?</p>
+            <DateField id='Data-inicio-C2' name='periodo-inicio' />
+            <DateField id='Data-fim-c2' name='periodo-fim' />
+            <ButtonConsultar/>
+        </div>
+        <div className='AppContentBody2'>
           <ResponsiveContainer width="100%" height="100%">
             <BarChart width={150} height={40} data={data}>
               <Bar dataKey="uv" fill="#1da584" />
@@ -74,6 +87,7 @@ function App() {
         </div>
       </section>
     </div>
+
   );
 }
 
