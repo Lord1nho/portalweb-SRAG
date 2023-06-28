@@ -1,7 +1,7 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color:WHITE_DEFAULT ;
+  font-size: 15;
+  font-style: 'sans-serif';
 }
 
 .AppHeader {
