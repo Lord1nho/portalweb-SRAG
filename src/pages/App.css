@@ -1,9 +1,3 @@
-.App {
-  background-color:WHITE_DEFAULT ;
-  font-size: 15;
-  font-style: 'sans-serif';
-}
-
 .AppHeader {
   padding-left: 10px;
   background-color: #fff;
@@ -16,7 +10,12 @@
   background-color: #fff;
 }
 
-.AppContentBody {
-  width: 480px;
-  height: 380px;
+.ChartsContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
