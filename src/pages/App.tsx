@@ -5,8 +5,8 @@ import {queries} from '../assets/Queries'
 
 function App() {
   return (
-    <div className="App">
-      <header className="AppHeader">
+    <div className="App" style={{backgroundColor: '#1da584'}}>
+      <header className="App">
         <h1>
           Portal SRAG Brasil
         </h1>
