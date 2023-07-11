@@ -3,8 +3,8 @@ import { PieChart, Pie, Legend, Tooltip, Cell } from 'recharts';
 import { DateField } from './DateField';
 import styles from './QueryCard.module.css'
 import RegionField from './RegionField';
-import axios from 'axios';
 import { BLACK_DEFAULT, GREEN_FOR_ITENS } from '../assets/colors';
+import ButtonData from '../request/buttonDataFetch';
 
 const COLORS = ['#0088FE', '#00C49F'];
 
@@ -12,14 +12,6 @@ export default function QueryCard({name, number, valueDescription1, valueDescrip
 
     const [data, setData] = useState(null);
 
-    const buttonDataFetch = async () => {
-        try {
-            const response = await axios.get(`http://localhost:3001/Query${number}`);
-            setData(response.data);
-        } catch (error) {
-            console.log(error);
-        }
-    }
 
     return (
         <section className={styles.QueryCardContainer}>
@@ -31,7 +23,7 @@ export default function QueryCard({name, number, valueDescription1, valueDescrip
                     <DateField id='Data-inicio-C1' name='periodo-inicio' />
                     <DateField id='Data-fim-c1' name='periodo-fim' />
                     <RegionField/>
-                    <button className={styles.queryButton} onClick={() => buttonDataFetch()}>
+                    <button className={styles.queryButton} onClick={() => ButtonData(number, setData)}>
                         Consultar
                     </button>
                 </div>
