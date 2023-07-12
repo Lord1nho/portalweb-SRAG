@@ -34,14 +34,14 @@ export default function QueryCard({name, number, valueDescription1, valueDescrip
                 <PieChart width={400} height={300}>
                     <Pie
                         dataKey="value"
-                        data={  [
+                        data={ [
                             {   name: valueDescription1, value: data[0]   },
                             {   name: valueDescription2, value: number === 1 || number === 3 ? data[1]-data[0] : data[1]   }
                         ]
                         }
                         cx={200}
                         cy={150}
-                        outerRadius={100}
+                        outerRadius={80}
                         fill={GREEN_FOR_ITENS}
                         label
                     />

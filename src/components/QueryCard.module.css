@@ -3,29 +3,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 304px;
     background-color: #fff;
-
-    padding: 15px;
-    border-radius: 10px;
-
+    margin: 16px;
+    padding: 16px;
+    border-radius: 18px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+/*
 .queryText {
     overflow-wrap: break-word;
 }
-
+*/
 .QuerySearchOptions {
-    display: flex;
+    display: block;
     justify-content: center;
-    column-gap: 8px;
 }
 
-.queryButton {
-    padding: 8px;
-    border-radius: 5px;
 
+.queryButton {
+    border-radius: 2px;
+    margin: 4px;
     background-color: #1da584;
     color: #fff;
 
@@ -34,11 +32,19 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+
 .queryButton:active {
     background-color: #fff;
     color: #193148;
 }
 
-.queryChart {
-    height: 300px;
+/*
+.queryButton:active {
+    background-color: #fff;
+    color: #193148;
 }
+.queryChart {
+}
+
+
+*/

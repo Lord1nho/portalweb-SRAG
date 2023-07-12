@@ -46,3 +46,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## ESTILIZAÇÃO
+
+Em arquivos CSS, procurem usar apenas múltiplos de 8, para manter um padrão e uma consistência nos componentes (utilize múltiplos de 4 caso queira mais granularidade)
