@@ -2,6 +2,7 @@ import './App.css';
 import QueryCard from '../components/QueryCard';
 import {queries} from '../assets/Queries'
 import { Link } from 'react-router-dom';
+import { GREEN_FOR_ITENS } from '../assets/colors';
 
 
 function Perguntas() {
@@ -16,7 +17,7 @@ function Perguntas() {
       >
         <Link
           to="/"
-          style={{ textDecoration: 'none'}}
+          style={{color: GREEN_FOR_ITENS ,textDecoration: 'none'}}
         >
           Página Inicial
         </Link>
@@ -25,7 +26,7 @@ function Perguntas() {
       >
         <Link
           to="/Perguntas"
-          style={{ textDecoration: 'none'}}
+          style={{color: GREEN_FOR_ITENS ,textDecoration: 'none'}}
         >
           Perguntas
         </Link>
