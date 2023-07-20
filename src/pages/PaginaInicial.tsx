@@ -35,11 +35,13 @@ function PaginaInicial() {
       </header>
       <p>Esta é a página Inicial do Portal da Síndrome Respiratória Aguda (Versão1.0)</p>
       <section className='containerLogin'>
-        <form id='login' action='Perguntas' method='GET'>
+        <form className='login' action='Perguntas' method='GET'>
         <h2>Área de Login</h2>
           <input type='text' name='usuario' placeholder='E-mail'></input>
           <input type='password' name='senha' placeholder='Senha'></input>
-          <input type='submit'/>
+          <a href=''>Esqueci a senha</a>
+          <a href=''>Não tenho cadastro</a>
+          <input type='submit' value='Acessar' />
        </form>
       </section>
     </div>
