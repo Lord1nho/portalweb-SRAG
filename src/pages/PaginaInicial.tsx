@@ -3,9 +3,23 @@ import QueryCard from '../components/QueryCard';
 import {queries} from '../assets/Queries'
 import { Link } from 'react-router-dom';
 import { GREEN_FOR_ITENS } from '../assets/colors';
+import { useState } from 'react';
+import {ButtonLogin} from '../request/buttonAuthentication';
 
 
 function PaginaInicial() {
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleInputEmailChange = (event: any) => {
+    setEmail(event.target.value);
+  };
+
+  const handleInputPasswordChange = (event: any) => {
+    setPassword(event.target.value);
+  };
+
   return (
     <div className="App" >
       <header>
@@ -36,12 +50,12 @@ function PaginaInicial() {
       <p>Esta é a página Inicial do Portal da Síndrome Respiratória Aguda (Versão1.0)</p>
       <section className='containerLogin'>
         <form className='login' action='Perguntas' method='GET'>
-        <h2>Área de Login</h2>
-          <input type='text' name='usuario' placeholder='E-mail'></input>
-          <input type='password' name='senha' placeholder='Senha'></input>
+          <h2>Área de Login</h2>
+          <input type='text' name='email' placeholder='E-mail' onChange={handleInputEmailChange} value={email}></input>
+          <input type='password' name='senha' placeholder='Senha' onChange={handleInputPasswordChange} value={password}></input>
           <a href=''>Esqueci a senha</a>
           <a href=''>Não tenho cadastro</a>
-          <input type='submit' value='Acessar' />
+          <input type='button' onClick={() => ButtonLogin(email, password)} />
        </form>
       </section>
     </div>
