@@ -1,16 +1,19 @@
 import './App.css';
-import QueryCard from '../components/QueryCard';
-import {queries} from '../assets/Queries'
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Perguntas from './Perguntas';
 import PaginaInicial from './PaginaInicial';
+import Login from './Login';
 
+/*
+Se quiserem testar o login, só trocar o primeiro route path pelo login
+*/
 
 function App() {
   return (
     <BrowserRouter>
     <Routes> 
-    <Route path = '/' element = {<PaginaInicial/>} />
+    <Route path = '' element = {<PaginaInicial/>} />
+    <Route path = '/Login' element = {<Login/>} />
       <Route path = '/Perguntas' element = {<Perguntas/>} />
     </Routes>
     </BrowserRouter>

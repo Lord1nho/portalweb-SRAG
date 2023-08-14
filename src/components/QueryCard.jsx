@@ -14,7 +14,7 @@ export default function QueryCard({name, number, valueDescription1, valueDescrip
 
 
     return (
-        <section className={styles.QueryCardContainer}>
+        <div className={styles.QueryCardContainer}>
             <div className='QuerySearch'>
                 <p className={styles.queryText}> 
                     {name}
@@ -53,6 +53,6 @@ export default function QueryCard({name, number, valueDescription1, valueDescrip
                 </PieChart>
                 }
             </div>
-        </section>
+        </div>
     )
 }
