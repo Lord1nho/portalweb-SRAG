@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import {ButtonLogin} from '../request/buttonAuthentication';
-import styles from './Login.module.css'
+import {ButtonRegister} from '../request/buttonAuthentication';
+import styles from './Register.module.css'
 import { Link } from 'react-router-dom';
 
 
-// Função de login 
+// Função de Register 
 
 
-function Login() {
+function Register() {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -21,19 +21,19 @@ function Login() {
   };
 
   return (
-    <div className={styles.loginPage} >
-      <section className={styles.loginContainer}>
+    <div className={styles.registerPage} >
+      <section className={styles.registerContainer}>
           <h1>Portal SRAG Brasil</h1>
-          <h2>Área de Login</h2>
+          <h2>Área de Registro</h2>
           <input type='text' name='email' placeholder='E-mail' onChange={handleInputEmailChange} value={email}></input>
           <input type='password' name='senha' placeholder='Senha' onChange={handleInputPasswordChange} value={password}></input>
           <a href=''>Esqueci a senha</a>
-          <Link to="/Register">Não tenho cadastro</Link>
-          <input type='button' value={'Entrar'} onClick={() => ButtonLogin(email, password)} />
+          <Link to="/Login">Já tem cadrasto? Entre</Link>
+          <input type='button' value={'Entrar'} onClick={() => ButtonRegister(email, password)} />
       </section>
     </div>
   );
 }
 
-export default Login;
+export default Register;
 //importante! Buscar formas de componentizar as telas sem repetir

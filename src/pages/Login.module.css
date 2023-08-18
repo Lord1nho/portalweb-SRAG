@@ -1,0 +1,27 @@
+.loginPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    height: 100%;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 8px;
+
+    padding: 48px 96px;
+
+    border-radius: 18px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.loginContainer h1,h2 {
+    margin: 0;
+}

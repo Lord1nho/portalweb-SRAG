@@ -1,6 +1,4 @@
-
 .App {
-  padding-left: 16px;
   background-color: #1da584;
 }
 
@@ -16,9 +14,6 @@
     background-color: #1da584;
 }
 
-.TituloPage {
-  display: flex;
-}
 
 
 
