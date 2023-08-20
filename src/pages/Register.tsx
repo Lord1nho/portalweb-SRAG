@@ -1,25 +1,37 @@
 import { useState } from 'react';
-import {ButtonRegister} from '../request/buttonAuthentication';
-import styles from './Register.module.css'
+import styles from './Register.module.css';
 import { Link } from 'react-router-dom';
-
+import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import { auth } from '../services/firebaseConfig';
 
 // Função de Register 
-
 
 function Register() {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  const [createUserWithEmailAndPassword, user, loading, error] =
+  useCreateUserWithEmailAndPassword(auth)
+
   const handleInputEmailChange = (event: any) => {
-    setEmail(event.target.value);
-  };
+    setEmail(event.target.value)
+  }
 
   const handleInputPasswordChange = (event: any) => {
-    setPassword(event.target.value);
-  };
+    setPassword(event.target.value)
+  }
 
+  const handleRegister = () => {
+    createUserWithEmailAndPassword(email, password)
+  }
+
+  if (loading) {
+    return <p>carregando...</p>
+  }
+  if (user) {
+    console.log(user);
+  }
   return (
     <div className={styles.registerPage} >
       <section className={styles.registerContainer}>
@@ -29,11 +41,10 @@ function Register() {
           <input type='password' name='senha' placeholder='Senha' onChange={handleInputPasswordChange} value={password}></input>
           <a href=''>Esqueci a senha</a>
           <Link to="/Login">Já tem cadrasto? Entre</Link>
-          <input type='button' value={'Entrar'} onClick={() => ButtonRegister(email, password)} />
+          <input type='button' value={'Entrar'} onClick={handleRegister} />
       </section>
     </div>
-  );
+  )
 }
 
-export default Register;
-//importante! Buscar formas de componentizar as telas sem repetir
+export default Register

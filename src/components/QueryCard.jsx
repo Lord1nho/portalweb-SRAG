@@ -4,7 +4,7 @@ import { DateField } from './DateField';
 import styles from './QueryCard.module.css'
 import RegionField from './RegionField';
 import { BLACK_DEFAULT, GREEN_FOR_ITENS } from '../assets/colors';
-import ButtonData from '../request/buttonDataFetch';
+import ButtonData from '../services/buttonDataFetch';
 
 const COLORS = ['#0088FE', '#00C49F'];
 
