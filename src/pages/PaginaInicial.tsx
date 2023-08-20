@@ -2,7 +2,7 @@ import './App.css';
 import { Link } from 'react-router-dom';
 import { GREEN_FOR_ITENS } from '../assets/colors';
 import NavBar from '../components/NavBar';
-import Demo from '../request/coords';
+import Demo from '../services/coords';
 
 
 
