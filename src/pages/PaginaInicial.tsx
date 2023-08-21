@@ -11,7 +11,7 @@ function PaginaInicial() {
   const isAuthenticated = useSelector((state:any) => state.auth.isAuthenticated)
 
   if(!isAuthenticated){
-    return <Navigate to="/Login"/>
+    return <Navigate to="/"/>
   }
 
   return (

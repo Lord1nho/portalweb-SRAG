@@ -31,7 +31,7 @@ function Login() {
     return <p>carregando...</p>
   }
   if (user) {
-    return <Navigate to="/" />
+    return <Navigate to="/PaginaInicial" />
   }
   return (
     <div className={styles.loginPage} >

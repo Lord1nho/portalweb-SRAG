@@ -11,7 +11,7 @@ function Perguntas() {
   const isAuthenticated = useSelector((state:any) => state.auth.isAuthenticated);
 
   if(isAuthenticated === false){
-    return <Navigate to="/Login"/>
+    return <Navigate to="/"/>
   }
   return (
     <div className="App" >
