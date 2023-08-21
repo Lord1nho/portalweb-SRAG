@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import styles from './Login.module.css';
-import { Link } from 'react-router-dom';
+import { Link, Navigate} from 'react-router-dom';
 import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth';
 import { auth } from '../services/firebaseConfig';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../actions/authActions';
 
 // Função de login 
 
 function Login() {
+  const dispatch = useDispatch();
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -21,13 +24,14 @@ function Login() {
   }
   const handleLogin = () => {
     signInUserWithEmailAndPassword(email, password)
+    dispatch(login('example@email.com'));
   }
 
   if (loading) {
     return <p>carregando...</p>
   }
   if (user) {
-    console.log(user);
+    return <Navigate to="/" />
   }
   return (
     <div className={styles.loginPage} >
