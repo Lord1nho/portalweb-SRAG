@@ -4,16 +4,15 @@ const authReducer = (state = { isAuthenticated: false, email: ''}, action) => {
         return {
           isAuthenticated: true,
           email: action.payload.email,
-        };
+        }
       case 'LOGOUT':
         return {
           isAuthenticated: false,
           email: '',
-        };
+        }
       default:
-        return state;
+        return state
     }
   };
   
-  export default authReducer;
-  
+export default authReducer

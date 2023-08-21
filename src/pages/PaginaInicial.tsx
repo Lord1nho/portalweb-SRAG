@@ -1,12 +1,18 @@
 import './App.css';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { GREEN_FOR_ITENS } from '../assets/colors';
 import NavBar from '../components/NavBar';
 import Demo from '../services/coords';
+import { useSelector } from 'react-redux';
 
 
 
 function PaginaInicial() {
+  const isAuthenticated = useSelector((state:any) => state.auth.isAuthenticated)
+
+  if(!isAuthenticated){
+    return <Navigate to="/Login"/>
+  }
 
   return (
     <div className="App" >
