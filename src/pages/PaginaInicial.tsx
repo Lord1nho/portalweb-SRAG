@@ -2,7 +2,7 @@ import './App.css';
 import { Link, Navigate } from 'react-router-dom';
 import { GREEN_FOR_ITENS } from '../assets/colors';
 import NavBar from '../components/NavBar';
-import Demo from '../services/coords';
+import Demo from '../components/coords';
 import { useSelector } from 'react-redux';
 
 
