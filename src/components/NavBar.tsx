@@ -12,7 +12,7 @@ export default function NavBar() {
             <div className={styles.NavBarButtonContainer}>
                 <Link
                 className={styles.NavBarButton}
-                to="/"
+                to="/PaginaInicial"
                 style={{color: GREEN_FOR_ITENS ,textDecoration: 'none'}}
                 >
                 Página Inicial

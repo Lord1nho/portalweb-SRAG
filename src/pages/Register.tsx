@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Register.module.css';
-import { Link } from 'react-router-dom';
+import { Link, Navigate} from 'react-router-dom';
 import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
 import { auth } from '../services/firebaseConfig';
 
@@ -30,7 +30,7 @@ function Register() {
     return <p>carregando...</p>
   }
   if (user) {
-    console.log(user);
+    return <Navigate to="/Login" />
   }
   return (
     <div className={styles.registerPage} >

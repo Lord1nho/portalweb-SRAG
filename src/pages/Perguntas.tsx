@@ -1,12 +1,18 @@
 import './App.css';
 import QueryCard from '../components/QueryCard';
 import {queries} from '../assets/Queries'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { GREEN_FOR_ITENS } from '../assets/colors';
 import NavBar from '../components/NavBar';
+import { useSelector } from 'react-redux';
 
 
 function Perguntas() {
+  const isAuthenticated = useSelector((state:any) => state.auth.isAuthenticated);
+
+  if(isAuthenticated === false){
+    return <Navigate to="/"/>
+  }
   return (
     <div className="App" >
       <NavBar/>
@@ -22,4 +28,4 @@ function Perguntas() {
   );
 }
 
-export default Perguntas;
+export default Perguntas
