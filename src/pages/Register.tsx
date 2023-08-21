@@ -49,9 +49,9 @@ function Register() {
             <div className={styles.message_box}>
               <p className={styles.error_message}><strong style={{color: '#f01a1a'}}>Erro:</strong> E-mail inválido.</p>
             </div>
+            <input className={styles.button_entrar} type='button' value={'Registrar'} onClick={handleRegister} />
             <a href=''>Esqueceu a senha?</a>
             <Link to="/Login">Já tem cadrasto? Entre</Link>
-            <input className={styles.button_entrar} type='button' value={'Entrar'} onClick={handleRegister} />
         </section>
       </div>
     )
@@ -70,7 +70,7 @@ function Register() {
             <div className={styles.dica_box}>
               <p className={styles.dica_mensagem}>Dica: utilize um e-mail existente.</p>
             </div>
-          <input className={styles.button_entrar} type='button' value={'Entrar'} onClick={handleRegister} />
+          <input className={styles.button_entrar} type='button' value={'Registrar'} onClick={handleRegister} />
           <a href=''>Esqueci a senha</a>
           <Link to="/Login">Já tem cadrasto? Entre</Link>
       </section>
