@@ -6,7 +6,7 @@ export default function NavBar() {
     return (
         <header className={styles.NavBarContainer}>
             <Link className={styles.NavBarTittle}
-            to='/'>
+            to='/PaginaInicial'>
             Portal SRAG Brasil
             </Link>
             <div className={styles.NavBarButtonContainer}>
