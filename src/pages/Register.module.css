@@ -21,6 +21,12 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.registerContainer input{
+    width: 200px;
+    padding: 8px;
+    border-radius: 2px;
+}
+
 .button_entrar {
     width: fit-content;
     border-radius: 2px;
@@ -31,6 +37,11 @@
     border: none;
     
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.button_entrar:active {
+    background-color: blue;
+    color: white;
 }
 
 

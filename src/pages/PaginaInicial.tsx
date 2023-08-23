@@ -17,8 +17,14 @@ function PaginaInicial() {
   return (
     <div className="App" >
       <NavBar/>
+      <div style={
+        {
+          marginLeft: 20 
+        }
+      } className='container_homepage'>
       <p>Esta é a página Inicial do Portal da Síndrome Respiratória Aguda (Versão1.0)</p>
       <Demo/>
+      </div>
     </div>
   );
 }
