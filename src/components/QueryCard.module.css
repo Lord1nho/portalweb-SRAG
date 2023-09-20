@@ -5,7 +5,7 @@
     align-items: center;
     width: 30%;
     max-width: 400px;
-    min-width: 200px;
+    min-width: 300px;
     background-color: #fff;
     margin: 16px;
     padding: 16px;
@@ -47,6 +47,4 @@
 }
 .queryChart {
 }
-
-
 */
