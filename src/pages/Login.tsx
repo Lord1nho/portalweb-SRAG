@@ -25,7 +25,7 @@ function Login() {
   }
   const handleLogin = () => {
     signInUserWithEmailAndPassword(email, password)
-    dispatch(login('example@email.com'));
+    dispatch(login(email));
   }
 
   if (error) {

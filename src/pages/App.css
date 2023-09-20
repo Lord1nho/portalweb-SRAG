@@ -23,12 +23,6 @@
   margin-right: 16px;
 }
 
-.ChartsContainer {
-  display: flex;
-  padding-left: 24px;
-  flex-direction: column;
-}
-
 footer {
   display: flex;
   justify-content: center;

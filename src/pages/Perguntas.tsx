@@ -1,4 +1,4 @@
-import './App.css';
+import './Perguntas.css';
 import QueryCard from '../components/QueryCard';
 import {queries} from '../assets/Queries'
 import { Link, Navigate } from 'react-router-dom';
